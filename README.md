@@ -13,5 +13,9 @@ Diseño responsive para login y registro de usuarios
   ![image](https://github.com/alexrqr/Login_Register_Users_Multi-Steps/assets/121317201/4d023193-dfbb-44ad-b3bd-5242cf734b58)
 
   # Parte 3: Términos y condiciones / Parte final
-  ![image](https://github.com/alexrqr/Login_Register_Users_Multi-Steps/assets/121317201/b11531a1-c4b0-4b77-b0c9-ab98f5f0021f)
+  ![image](https://github.com/alexrqr/Login_Register_Users_Multi-Steps/assets/121317201/738785df-648c-487b-b24c-f516a45f7fbe)
+
+  ![image](https://github.com/alexrqr/Login_Register_Users_Multi-Steps/assets/121317201/a4a74c37-0829-4132-a5ae-08925cef4c00)
+
+
 
