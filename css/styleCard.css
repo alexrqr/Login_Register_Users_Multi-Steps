@@ -1,0 +1,232 @@
+/* ESTILOS GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.shadow {
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+}
+
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.box-login {
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: grid;
+  place-items: center;
+  min-height: 80%;
+  width: 80%;
+  height: 80%;
+  padding: 0px;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+}
+
+.display-contents {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+}
+
+/* primer contenido */
+.card-text {
+  padding-left: 0;
+  margin-left: 0;
+  width: 30%;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/fondo2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+.card-text span a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 10px 5px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #eff0ff;
+  color: #fff;
+  width: 70%;
+  font-size: 20px;
+  overflow: hidden;
+}
+.card-text span a:hover {
+  background-color: #fff;
+  color: #2271B3;
+}
+.card-text span a i {
+  padding-left: 8px;
+  font-size: 20px;
+  color: #2271B3;
+  font-size: 30px;
+  overflow: hidden;
+}
+.card-text span a i:hover {
+  color: #2271B3;
+}
+
+/* segundo contenido */
+.card-accounts {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+  width: 70%;
+  overflow: hidden;
+}
+.card-accounts .form-group {
+  padding: 8px 0px;
+  /* Style of btn sesion */
+}
+.card-accounts .form-group button {
+  padding: 8px 20px;
+  border-radius: 10px;
+  background-color: #2271B3;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+.card-accounts .form-group button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.card-accounts .form-group button i {
+  font-size: 30px;
+  color: #fff;
+}
+.card-accounts .title-form {
+  font-weight: bold;
+  font-size: 30px;
+  color: #000;
+  overflow: hidden;
+}
+.card-accounts .social-media-platform {
+  display: flex;
+  justify-content: space-evenly;
+}
+.card-accounts .social-media-platform a {
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px #000;
+  background-color: #f9efef;
+}
+.card-accounts .social-media-platform a i {
+  font-size: 30px;
+  color: #2271B3;
+}
+.card-accounts .form-inputs i {
+  font-size: 25px;
+  padding: 20px 0;
+  color: #2271B3;
+}
+.card-accounts .form-inputs i input {
+  outline: none;
+  background-color: none;
+  border: none;
+  border-bottom: 2px solid #2271B3;
+  width: 329px;
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+/*Responsive in tablet is acoplated*/
+/*=========================================================*/
+/*=============Responsive for mobile=======================*/
+@media screen and (min-width: 490px) and (max-width: 768px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .display-contents {
+    display: block;
+  }
+  /* primer contenido */
+  .card-text {
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    padding: 12px;
+  }
+  .card-text span a {
+    padding: 3px 20px;
+  }
+  /* segundo contenido */
+  .card-accounts {
+    display: grid;
+    place-items: center;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 6px 0px;
+  }
+  .card-accounts .form-group {
+    padding: 5px 0px;
+    /* Style of btn sesion */
+  }
+  .card-accounts .form-group button {
+    padding: 4px 18px;
+  }
+  .card-accounts .title-form {
+    color: #2271B3;
+    font-size: 30px;
+  }
+  .card-accounts .social-media-platform {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card-accounts .social-media-platform a {
+    background-color: #2271B3;
+    padding: 4px;
+  }
+  .card-accounts .social-media-platform a i {
+    color: #fff;
+  }
+  .card-accounts .form-inputs i {
+    color: #2271B3;
+  }
+  .card-accounts .form-inputs i input {
+    width: 320px;
+    padding-left: 8px;
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=styleCard.css.map */

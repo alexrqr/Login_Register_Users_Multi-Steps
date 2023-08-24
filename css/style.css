@@ -1,0 +1,794 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f5f9;
+    padding: 0;
+    margin: 0;
+}
+
+/*=========================Contenedor-general==========================*/
+.container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.justify-content {
+    width: 80%;
+    margin: 1% auto;
+    display: flex;
+    height: 95vh;
+    box-shadow: 0 12px 18px rgba(54, 176, 138, 0.005);
+    border-radius: 6px;
+    background: #fff;
+}
+
+.login-link {
+    background-image: url('../img/fondo2.jpg');
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    width: 30%;
+    padding: 3%;
+}
+
+/*======================Segundo contenedor======================*/
+.signup-form-container {
+    width: 70%;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-big-heading {
+    font-weight: 800;
+    color: #fff;
+    font-size: 1.7rem;
+    margin: 46% 0 5%;
+}
+
+.primary-bg-text {
+    color: #eff0ff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.loginbtn {
+    text-decoration: none;
+    color: #fff;
+    width: 70%;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 7% 15%;
+    text-align: center;
+    border: 2px solid #eff0ff;
+    border-radius: 20px;
+    padding: 3% 0;
+}
+
+a.loginbtn:hover {
+    color: #2271B3;
+    background-color: #fff;
+}
+
+.big-heading {
+    font-weight: 900;
+    font-size: 2rem;
+    color: #2271B3;
+    padding-top: 35px;
+}
+
+.social-media-platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-platform a {
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px #000;
+    background-color: #f9efef;
+    margin: 14px;
+}
+
+.social-media-platform a i {
+    font-size: 30px;
+    color: #2271B3;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0;
+    width: 70%;
+}
+
+.progress-bar .stage {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.progress-bar .tool-tip {
+    color: #2271B3;
+    font-weight: 600;
+}
+
+.stageno {
+    margin: 6% 0;
+    padding: 2% 7%;
+    border-radius: 50%;
+    background-color: #2271B3;
+    color: #fff;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin: 4% 0;
+}
+
+.text-fields {
+    display: flex;
+    align-items: center;
+    border: 1px solid #2271B3;
+    padding: 2%;
+    margin: 0 2%;
+    width: 46%;
+    border-radius: 4px;
+    color: #000;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: inherit;
+    color: #2271B3;
+    width: 200%;
+    margin-left: 4%;
+    font-size: 1rem;
+}
+
+.signup-form-content {
+    width: 100%;
+    padding: 0 3%;
+}
+
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-year-field,
+input::placeholder {
+    background-color: #fff;
+    color: #2271B3;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2271B3;
+    opacity: 1;
+    height: 20px;
+    width: 20px;
+}
+
+.text-fields.fname:after {
+    content: 'Nombres';
+    background-color: #fff;
+    position: relative;
+    padding: 0 4%;
+    left: -210px;
+    width: 334px;
+    color: #2271B3;
+    top: -33px;
+}
+
+.text-fields.lname:after {
+    content: 'Apellidos';
+    background-color: #fff;
+    position: relative;
+    padding: 0 4%;
+    left: -210px;
+    width: 302px;
+    color: #2271B3;
+    top: -33px;
+}
+
+.text-fields.dob:after {
+    content: 'Cumpleaños';
+    background-color: #fff;
+    position: relative;
+    padding: 0 4%;
+    left: -205px;
+    width: 342px;
+    color: #2271B3;
+    top: -33px;
+}
+
+.gender-selection {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    width: 100%;
+    margin-right: 0px;
+}
+
+.field-heading {
+    color: #2271B3;
+    width: 20%;
+}
+
+.gender-selection label {
+    margin: 0 2%;
+    display: flex;
+    align-items: center;
+    color: #000;
+    width: 25%;
+    /*20*/
+}
+
+input[type="radio"] {
+    accent-color: #2271B3;
+    margin-right: 6%;
+}
+
+.pagination-btns {
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+    padding: 0 4%;
+}
+
+.nextPage,
+.previousPage {
+    background-color: #2271B3;
+    color: #fff;
+    width: 45%;
+    cursor: pointer;
+    padding: 2%;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.nextPage:hover,
+.previousPage:hover {
+    background-color: #000;
+}
+
+.text-fields.phone:after {
+    content: 'N° Telefono';
+    background-color: #fff;
+    position: relative;
+    padding: 0 4%;
+    left: -187px;
+    width: 492px;
+    color: #2271B3;
+    top: -33px;
+}
+
+.text-fields.email:after {
+    content: 'Correo';
+    background-color: #fff;
+    position: relative;
+    padding: 0 4%;
+    left: -187px;
+    width: 388px;
+    color: #2271B3;
+    top: -33px;
+}
+
+.text-fields.password:after,
+.text-fields.confirmpassword:after {
+    content: 'Contraseña';
+    background-color: #fff;
+    position: relative;
+    padding: 0 4%;
+    left: -182px;
+    width: 541px;
+    color: #2271B3;
+    top: -33px;
+}
+
+.text-fields.text-fields.confirmpassword:after {
+    content: 'Rep.. Contra..';
+    width: 541px;
+    left: -153px;
+}
+
+.tc-container input {
+    width: 4%;
+    margin-left: 4%;
+    accent-color: #2271B3;
+}
+
+.tc a {
+    text-decoration: none;
+    color: #2271B3;
+    padding-left: 102px;
+}
+
+label.tc {
+    margin-left: 4%;
+}
+
+/* =================ESTILOS DE MODAL================*/
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 5px;
+    border: 1px solid #000;
+    max-width: 50%;
+    max-height: 70%;
+    overflow: auto;
+}
+
+.modal-content .title-modal {
+    width: 100%;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    background-color: #2271b3;
+    border-bottom: 1px solid #000
+}
+
+.modal-content .title-modal .title {
+    overflow: hidden;
+    border-right: 0.15em solid rgb(8, 131, 231);
+    white-space: nowrap;
+    animation: typingAnimation 4s steps(40) infinite;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@keyframes typingAnimation {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+.modal-content .contenido {
+    padding: 10px 20px;
+}
+
+.btn-modal {
+    display: grid;
+    place-items: start;
+    padding: 12px 17px;
+    border: 2px solid #000;
+}
+
+.btn-modal button {
+    padding: 5px 40px;
+    font-size: 25px;
+    background-color: rgb(189, 42, 42);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+}
+
+/*===================End style modal===================*/
+
+/*=====================================================*/
+/*=======Respomsive for tablet - desktop - mobile=======*/
+@media screen and (min-width: 785px) and (max-width: 1335px) {
+    body {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #f5f5f9;
+        padding: 0;
+        margin: 0;
+    }
+
+    /*=========================Contenedor-general==========================*/
+    .container {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .justify-content {
+        margin: 1% auto;
+        display: block;
+        height: auto;
+    }
+
+    .login-link {
+        width: 100%;
+        padding: 8px;
+        height: auto;
+    }
+
+    /*======================Segundo contenedor======================*/
+    .signup-form-container {
+        width: 100%;
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*Falta revisar desde este apartado*/
+    .side-big-heading {
+        margin: 2% 0 3%;
+    }
+
+    .loginbtn {
+        margin: 4% 8%;
+        /*7 15*/
+    }
+
+    .social-media-platform a {
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 4px 4px #000;
+        background-color: #f9efef;
+        margin: 14px;
+    }
+
+    .progress-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2% 0;
+        width: 85%;
+        /*70*/
+    }
+
+    .progress-bar .stage {
+        width: 35%;
+    }
+
+    .text-fields {
+        width: 40%;
+    }
+
+    input {
+        width: 150%;
+        margin-left: 4%;
+    }
+
+    .text-fields.fname:after {
+        /*Nombres*/
+        padding: 0 3%;
+        left: auto;
+        width: 300px;
+        /*334*/
+    }
+
+    .text-fields.lname:after {
+        /*Apellidos*/
+        padding: 0 3%;
+        left: auto;
+        width: 300px;
+        /*302*/
+    }
+
+    .text-fields.dob:after {
+        /*Cumpleaños*/
+        padding: 0 3%;
+        left: auto;
+        width: 300px;
+        /*342*/
+    }
+
+    .field-heading {
+        color: #2271B3;
+        width: 15%;
+        /*20*/
+    }
+
+    .gender-selection label {
+        width: 25%;
+        /*20*/
+    }
+
+    .nextPage,
+    .previousPage {
+        background-color: #2271B3;
+        color: #fff;
+        width: 45%;
+        cursor: pointer;
+        padding: 2%;
+        font-weight: 500;
+        font-size: 1rem;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+
+    .nextPage:hover,
+    .previousPage:hover {
+        background-color: #000;
+    }
+
+    .text-fields.phone:after {
+        content: 'N° Telefono';
+        background-color: #fff;
+        position: relative;
+        padding: 0 4%;
+        left: -187px;
+        width: 492px;
+        color: #2271B3;
+        top: -33px;
+    }
+
+    .text-fields.email:after {
+        content: 'Correo';
+        background-color: #fff;
+        position: relative;
+        padding: 0 4%;
+        left: -187px;
+        width: 388px;
+        color: #2271B3;
+        top: -33px;
+    }
+
+    .text-fields.password:after,
+    .text-fields.confirmpassword:after {
+        content: 'Contraseña';
+        background-color: #fff;
+        position: relative;
+        padding: 0 4%;
+        left: -182px;
+        width: 541px;
+        color: #2271B3;
+        top: -33px;
+    }
+
+    .text-fields.text-fields.confirmpassword:after {
+        content: 'Rep.. Contra..';
+        width: 541px;
+        left: -153px;
+    }
+
+    .tc-container input {
+        width: 6%;
+        margin-left: 2%;
+    }
+
+    /* =================ESTILOS DE MODAL================*/
+    .modal-content .title-modal .title {
+        animation: typingAnimation 4s steps(40) infinite;
+    }
+
+    @keyframes typingAnimation {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 95%;
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 784px) {
+    
+    body {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    /*=========================Contenedor-general==========================*/
+    .container {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .justify-content {
+        width: auto;
+        display: block;
+        height: 100%;
+    }
+
+    .login-link {
+        width: 100%;
+    }
+    /*empieza formulario*/
+    .signup-form-container {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-big-heading {
+        margin: 1% 0 0;
+    }
+
+    .primary-bg-text {
+        text-align: left;
+    }
+
+    .loginbtn {
+        width: 40%;
+        margin: 3% 5%;
+        padding: 1% 0;
+    }
+
+    .progress-bar {
+        margin: 1% 0;
+        width: 80%; /*70%*/
+    }
+
+    .progress-bar .stage {
+        width: 20%;
+    }
+
+    /*Esto manda a los inputs*/
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin: 1% 0;
+    }
+
+    /*Separacion de los inputs*/
+    .text-fields {
+        display: flex;
+        align-items: center;
+        border: 1px solid #2271B3;
+        margin: 2.3% 2%;
+        width: 65%; /*Ancho de las cajas de texto*/
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background: inherit;
+        color: #2271B3;
+        width: 200%;
+        margin-left: 4%;
+        font-size: 1rem;
+    }
+
+    .text-fields.fname:after { /*Nombres*/
+        padding: 0 4%;
+        left: -210px;
+        width: 334px;
+    }
+
+    .text-fields.lname:after { /*Apellidos*/
+        padding: 0 4%;
+        left: -210px;
+        width: 334px;
+    }
+
+    .text-fields.dob:after {/*Cumpleaños*/
+        padding: 0 4%;
+        left: -193px;
+        width: 342px;
+    }
+
+    .gender-selection {
+        width: 66%;
+    }
+
+    .field-heading {
+        color: #2271B3;
+        width: 20%;
+    }
+    
+    /*Primer button*/
+    .pagination-btns {
+        padding-top: 10px;
+        margin: 2% 0;
+        padding: 0 3%;
+    }
+
+    .nextPage,
+    .previousPage {
+        width: 36%;
+        padding: 1.5%;
+    }
+
+    .text-fields.phone:after {/*Telefono*/
+        content: 'Telefono';
+        left: -187px;
+        width: 334px;
+    }
+
+    .text-fields.email:after {/*Correo*/
+        left: -187px;
+        width: 334px;
+    }
+
+    .text-fields.password:after,
+    .text-fields.confirmpassword:after { /*Contraseña*/
+        padding: 0 4%;
+        left: -175px;
+        width: 334px;
+    }
+
+    .text-fields.text-fields.confirmpassword:after {
+        content: 'Repetir clave';
+        padding: 0 2%;
+        width: 441px;
+        left: -165px;
+    }
+
+    .tc a {
+        padding-left: 72px;
+    }
+
+    /* =================ESTILOS DE MODAL================*/
+
+    .modal-content {
+        max-width: 70%;
+        max-height: 65%;
+    }
+
+    .modal-content .title-modal {
+        border: 2px solid #000;
+    }
+
+    .modal-content .title-modal .title {
+        overflow: hidden;
+        border-right: 0.15em solid rgb(8, 131, 231);
+        white-space: nowrap;
+        animation: typingAnimation 4s steps(40) infinite;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    @keyframes typingAnimation {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 80%;
+        }
+    }
+
+    .btn-modal button {
+        padding: 2px 40px;
+    }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- BOXICONS LINK -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        .shadow {
+            box-shadow: 0 4px 8px #000 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container shadow">
+        <div class="row justify-content shadow">
+            <div class="login-link">
+                <p class="side-big-heading">¿Ya tienes una cuenta?</p>
+                <p class="primary-bg-text">Inicia sesión en nuestro sitio web con tu cuenta </p>
+                <a href="index.html" class="loginbtn">Inicia sesión <i style="padding-left: 4px; font-size: 30px;"
+                        class='bx bx-log-in-circle'></i></a>
+            </div>
+            <form action="" class="signup-form-container">
+                <p class="big-heading">Crea tu cuenta</p>
+                <div class="social-media-platform">
+                    <a href="#"><i class='bx bx-sm bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bx-sm bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bx-sm bxl-github'></i></a>
+                </div>
+                <div class="progress-bar">
+                    <div class="stage">
+                        <p class="tool-tip">Información personal</p>
+                        <p class="stageno stageno-1">1</p>
+                    </div>
+                    <div class="stage">
+                        <p class="tool-tip">Contacto</p>
+                        <p class="stageno stageno-2">2</p>
+                    </div>
+                    <div class="stage">
+                        <p class="tool-tip">Final del registro</p>
+                        <p class="stageno stageno-3">3</p>
+                    </div>
+                </div>
+                <div class="signup-form-content">
+                    <div class="stage1-content">
+                        <div class="button-container">
+                            <div class="text-fields fname">
+                                <label for="fname"><i class='bx bx-user'></i></label>
+                                <input type="text" name="fname" id="fname" placeholder="Ingresa tus nombres">
+                            </div>
+                            <div class="text-fields lname">
+                                <label for="lname"><i class='bx bx-user'></i></label>
+                                <input type="text" name="lname" id="lname" placeholder="Ingresa tus apellidos">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="text-fields dob">
+                                <label for="fecha"><i class='bx bx-date'></i></label>
+                                <input type="date" name="fecha" id="fecha">
+                            </div>
+                            <div class="gender-selection">
+                                <p class="field-heading">Género : </p>
+                                <label for="male">
+                                    <input type="radio" name="gender" id="male">Masculino
+                                </label>
+                                <label for="female">
+                                    <input type="radio" name="gender" id="female">Femenino
+                                </label>
+                            </div>
+                        </div>
+                        <div class="pagination-btns">
+                            <input type="button" value="Siguiente" class="nextPage stagebtn1b" onclick="stage1to2()">
+                        </div>
+                    </div>
+                    <div class="stage2-content">
+                        <div class="button-container">
+                            <div class="text-fields phone">
+                                <label for="phone"><i class='bx bx-phone'></i></label>
+                                <input type="text" name="phone" id="phone" placeholder="N° telefono">
+                            </div>
+                            <div class="text-fields email">
+                                <label for="email"><i class='bx bx-envelope'></i></label>
+                                <input type="email" name="email" id="email" placeholder="Ingresa tu correo">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="text-fields password">
+                                <label for="password"><i class='bx bx-lock-alt'></i></label>
+                                <input type="password" name="password" id="password"
+                                    placeholder="Ingresa tu contraseña">
+                            </div>
+                            <div class="text-fields confirmpassword">
+                                <label for="confirmpassword"><i class='bx bx-lock-alt'></i></label>
+                                <input type="password" name="confirmpassword" id="confirmpassword"
+                                    placeholder="Confirma tu contraseña">
+                            </div>
+                        </div>
+                        <div class="pagination-btns">
+                            <input type="button" value="Volver atrás" class="previousPage stagebtn2a"
+                                onclick="stage2to1()">
+                            <input type="button" value="Siguiente" class="nextPage stagebtn2b" onclick="stage2to3()">
+                        </div>
+                    </div>
+                    <div class="stage3-content">
+                        <div class="tc-container">
+                            <label for="tc" class="tc">
+                                <input type="checkbox" name="tc" id="tc" required>
+                                Al rellenar tus datos, aceptas los <br> <a href="#" id="open-modal-link">
+                                    terminos y condiciones. </a>
+                            </label>
+                        </div>
+                        <div class="pagination-btns">
+                            <input type="button" value="Volver atrás" class="previousPage stagebtn3a"
+                                onclick="stage3to2()">
+                            <input type="submit" value="Registrarme" class="nextPage stagebtn3b">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contenido para cerrar el modal -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <div class="title-modal">
+                <h4 class="title">Términos y Condiciones</h4>
+            </div>
+            <div class="contenido">
+                <b>1. ACEPTACIÓN </b>
+                <p style=" text-align: justify;">
+                    En el presente documento (en adelante, el “Contrato”) se establecen los términos y
+                    condiciones de <b>SystWeb</b> que serán de aplicación al acceso y uso por parte del
+                    Usuario de esta págin web (el “Sitio Web”). Les rogamos lean atentamente el presente
+                    Contrato.
+                    Al acceder, consultar o utilizar el Sitio Web, los Usuarios (“Vd.”, “usted”, “Usuario”,
+                    o “usuario”) aceptan cumplir los términos y condiciones establecidos en este Contrato.
+                    En caso de que usted no acepte quedar vinculado por los presentes términos y condiciones,
+                    no podrá acceder a, ni utilizar, el Sitio Web.
+                </p>
+                <b>2. REQUISITOS RELATIVOS AL USUARIO</b>
+                <p style=" text-align: justify;">
+                    El Sitio Web y los servicios relacionados con el mismo se ofrecen a los Usuarios que
+                    tengan capacidad legal para otorgar contratos legalmente vinculantes según la
+                    legislación aplicable. Los menores no están autorizados para utilizar el Sitio Web.
+                    Si usted es menor de edad, por favor, no utilice esta web.
+                </p>
+
+                <b>3. LICENCIA</b>
+                <p style="text-align: justify;">
+                    En este acto, RH otorga al Usuario una licencia limitada, no exclusiva, intransferible,
+                    no susceptible de cesión y revocable; para consultar y descargar, de forma temporal,
+                    una copia del contenido ofrecido en el Sitio Web, únicamente para uso personal del
+                    Usuario o dentro de su empresa, y nunca con fines comerciales. Todo el material mostrado
+                    u ofrecido en el Sitio Web, entre otros ejemplos, el material gráfico, los documentos,
+                    textos, imágenes, sonido, video, audio, las ilustraciones, el software y el código HTML
+                    (en conjunto, el “Contenido”), es de exclusiva propiedad de RH o de las empresas que
+                    facilitan dicho material. El Contenido está protegido por las leyes de copyright chilenas,
+                    estadounidenses e internacionales, así como por las demás leyes, reglamentos y normas
+                    aplicables a los derechos de propiedad intelectual. Salvo disposición expresa en contrario
+                    en el presente contrato, y/o salvo que por imperativo legal ello esté expresamente
+                    permitido por leyes derogatorias de las actualmente vigentes, el Usuario no podrá
+                    (i) utilizar, copiar, modificar, mostrar, eliminar, distribuir, descargar, almacenar,
+                    reproducir, transmitir, publicar, vender, revender, adaptar, invertir el proceso de
+                    creación o crear productos derivados a partir de, el Contenido. Tampoco podrá
+                    (ii) utilizar el Contenido en otras páginas Web o en cualquier medio de comunicación como,
+                    por ejemplo, en un entorno de red, sin la previa autorización por escrito en este sentido
+                    de RH.
+                </p>
+
+                <b>4. INFORMACIÓN FACILITADA POR EL USUARIO </b>
+                <p style="text-align: justify;">
+                    El Sitio Web ofrece al Usuario un foro de obtención de empleo e información profesional.
+                    Al facilitar o introducir la información en el Sitio Web (“Información del Usuario”),
+                    el Usuario otorga a RH licencia y derecho permanente, no exclusivo, irrevocable, libre de
+                    royalties, durante el tiempo máximo permitido por la legislación aplicable, pero no le
+                    impone obligación de, utilizar, copiar, modificar, mostrar, distribuir, descargar,
+                    almacenar, reproducir, transmitir, publicar, vender, revender, adaptar ni crear productos
+                    derivados en todo o en parte a partir de, la Información del Usuario, en ningún modo o
+                    manera.
+                    (i) proteger la integridad del Sitio Web;
+                    (ii) proteger los derechos de RH;
+                    (iii) cumplir una orden judicial;
+                    (iv) cumplir cualquier trámite legal;
+                    (v) hacer valer los derechos y acciones que asisten a RH a tenor de este Contrato; y
+                    (vi) satisfacer cualquier petición relativa a la infracción de derechos de terceros.
+                </p>
+                <b>5. PROHIBICIÓN GENERAL </b>
+                <p style="text-align: justify;">
+                    Al acceder a y utilizar el Sitio Web, el Usuario se compromete a NO:
+                    (a) incumplir todas las leyes, reglamentos y normas aplicables a nivel local, así
+                    como cualquier otra legislación aplicable como las leyes contra la discriminación
+                    laboral o las leyes por la igualdad de oportunidades en el empleo, cuando proceda;
+                    (b) infringir los derechos de propiedad intelectual y de privacidad, entre otros, los
+                    derechos de patente (copyright), los derechos sobre la base de datos, las marcas
+                    registradas o el know how de terceros;
+                    (c) descargar, enviar, transmitir o almacenar material que:
+                    • sea ilegal, ofensivo, difamatorio, fraudulento, engañoso, que induzca a error,
+                    dañino, amenazador, hostil, obsceno o censurable;
+                    • infrinja las obligaciones contractuales o de confidencialidad del Usuario;
+                    • perjudique o interfiera en las aplicaciones normales del Sitio Web, como el
+                    envío o la transmisión de virus, gusanos o troyanos, el envío continuado de
+                    material repetido o el envío de archivos desacostumbradamente grandes; o
+                    • que no esté permitido por RH, como, por ejemplo, material publicitario no autorizado,
+                    material promocional no solicitado, “correo basura”, “spams”, “cartas en cadena”,
+                    (d) vulnerar los derechos personales y de privacidad de terceros abusando del Contenido.
+                    (e) contravenir, o intentar contravenir, las medidas de seguridad del Sitio Web;
+                    (f) utilizar cualquier aparato, procedimiento o mecanismo como, por ejemplo, spiders y
+                    robots de rastreo, para localizar, rescatar, buscar, o acceder al Sitio Web o al
+                    Contenido, sin el previo consentimiento por escrito de parte de RH;
+                    (g) acceder o intentar acceder a la cuenta o al login de las terceras personas o
+                    empresas indicadas en el Sitio Web;
+                    (h) copiar, modificar, reproducir, eliminar, distribuir, descargar, almacenar,
+                    transmitir, vender, revender, publicar, invertir el proceso de creación o
+                    crear productos derivados a partir del Contenido, excepto en lo que concierne al
+                    material remitido por el propio Usuario y que es de su propiedad, o si así lo
+                    autorizan las leyes de propiedad intelectual aplicables;
+                    (i) enviar o facilitar información incorrecta, falsa o incompleta, en relación con el
+                    currículum vitae, los datos biográficos, la fecha en que empezó a trabajar o el
+                    perfil de la empresa del Usuario;
+                    (j) hacerse pasar por otra persona o empresa;
+                    (k) utilizar el Sitio Web de forma no autorizada o para alguna actividad delictiva;
+                    (l) falsificar la información de cabecera en el correo electrónico; o
+                    (m) falsear los datos sobre sí mismo, sobre su asociación con terceros o sobre su empresa.
+                </p>
+                <b>6. UTILIZACIÓN DEL SITIO Y OBLIGACIONES CONCRETAS </b>
+                <p style="text-align: justify;">
+                    Además de las obligaciones generales señaladas en el Artículo 5, el Usuario deberá:
+                    (a) utilizar el Sitio Web únicamente para los fines legalmente permitidos de buscar empleo y
+                    recabar información profesional;
+                    (b) facilitar y mantener los datos personales que conforman la Información del Usuario de forma
+                    completa, correcta, actualizada y veraz;
+                    (c) enviar solamente material sobre el que el Usuario tenga los correspondientes derechos o
+                    licencia para hacerlo;
+                    (d) utilizar su propio criterio, precaución y sentido común al gestionar las oportunidades de
+                    empleo y la información conseguida a través del Sitio Web; y
+                    (e) asumir el riesgo de confiar en el contenido, o utilizar la información, facilitados por
+                    terceros.
+                </p>
+                <b>7. CUENTA Y CONTRASEÑA </b>
+                <p style="text-align: justify;">
+                    Cuando el Usuario utiliza el Sitio Web, puede optar por abrir una cuenta en el Sitio. En ese
+                    caso, el Usuario recibirá el número de cuenta virtual y la contraseña inicial que le correspondan.
+                    Es responsabilidad exclusiva del Usuario:
+                    (a) mantener la confidencialidad de dichos números de cuenta virtual y contraseña;
+                    (b) actualizar y comprobar frecuentemente su contraseña; y
+                    (c) notificar inmediatamente a RH, si tiene conocimiento del uso no autorizado de su cuenta o de
+                    cualquier vulneración de las medidas de seguridad.
+                </p>
+                <b>8. EMPLEO </b>
+                <p style="text-align: justify;">
+                    El Usuario asume y acepta que RH:
+                    (a) no garantiza que el Usuario reciba efectivamente una oferta de empleo a través del Sitio Web;
+                    (b) no se responsabiliza de las ofertas de empleo, la comprobación de dichas ofertas, las
+                    decisiones sobre contratación que adopten y los trabajos que oferten terceras personas o
+                    empresas;
+                    (c) no garantiza la exactitud, integridad, validez o vigencia de la información incluida en la
+                    Web por terceras personas o empresas;
+                    (d) aunque RH revisa el material de terceros y solamente permite la inclusión del material que,
+                    a su leal saber y entender, no infringe la legislación aplicable, no asumirá responsabilidad
+                    alguna por el material enviado por terceros, como, por ejemplo, la información relativa a la
+                    creación de puestos de trabajo en una empresa o la incluida en las listas de empleo.
+                    (e) no es ni una empresa que contrata al Usuario ni existe contrato de agencia alguno.
+                    El Usuario deberá usar su buen juicio, precaución y sentido común a la hora de evaluar las
+                    empresas que puedan contratarle y la información facilitada por terceros.
+                </p>
+                <b>9. VÍNCULOS A PÁGINAS WEB DE TERCEROS</b>
+                <p style="text-align: justify;">
+                    El Sitio Web puede tener vínculos, como hipervínculos o enlaces, que indican el acceso a páginas
+                    Web de terceros (los “Sitios Relacionados”). Aunque RH revisa el material de terceros y solamente
+                    permite la inclusión de los Sitios Relacionados que, a su leal saber y entender, no infringen la
+                    legislación aplicable, RH no puede controlar ni realizar un seguimiento de los Sitios Relacionados
+                    y, en consecuencia, no asumirá responsabilidad alguna en cuanto a la exactitud, seguridad o
+                    fiabilidad del material, información o contenido incluido en dichos Sitios Relacionados.
+                    La inclusión de los Sitios Relacionados en el Sitio Web no implica que haya relación o asociación
+                    alguna entre RH y el propietario de los Sitios Relacionados, ni la aprobación o promoción por
+                    parte de RH de dichos Sitios Relacionados. RH incluye los Sitios Relacionados solamente para
+                    comodidad del Usuario. Este es el único responsable del acceso a los Sitios Relacionados.
+                </p>
+                <b>10. PRIVACIDAD </b>
+                <p style="text-align: justify;">
+                    RH procesará toda la información personal que el Usuario introduzca o facilite a través de nuestro
+                    Sitio Web de conformidad con la Política de Privacidad del Sitio Web y los términos y condiciones
+                    relativos a la misma en este contrato.
+                </p>
+            </div>
+            <div class="btn-modal">
+                <button href="#" id="close-modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/script.js">
+</script>
+
+</html>
